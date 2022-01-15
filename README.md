@@ -7,7 +7,11 @@
   
     Volatile修饰的变量，执行写操作后立即同步到主内存，同时线程中的缓存失效，线程发现缓存失效重新获取主内存中的值。Volatile通过"内存屏障"防止指令重排。
   - Synchronized关键字原理，如何优化耗时，Synchronized(String.class)会怎么样；
-    
+
+    在实例方法前加Synchronized关键字，锁住的是对象实例；
+    在静态方法前加Synchronized关键字，锁住的是这个类；
+    在方法内部加Synchronized关键字，锁住的是(xx)内的对象；
+    Synchronized是可重入锁，以线程为单位的可重入。
     
   - 线程安全的单例实现；
   - 可重入锁、不可重入锁；
