@@ -14,7 +14,7 @@
     Synchronized是可重入锁，以线程为单位的可重入。
     
   - 线程的状态
-    [线程状态](https://www.cnblogs.com/aspirant/p/8876670.html)
+    [线程状态-博客园](https://www.cnblogs.com/aspirant/p/8876670.html)
     
   - 线程安全的单例实现；
   - 可重入锁、不可重入锁；
