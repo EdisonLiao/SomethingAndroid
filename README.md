@@ -35,5 +35,7 @@
     可重入是指当前线程获得了锁资源，当前线程可以直接再次获取锁资源。ReentrantLock和Synchronized都是可重入锁，可重入锁避免单线程的死锁。
   - 线程池；
 
-    核心线程也可以回收，allowCoreThreadTimeOut
+    核心线程也可以回收，allowCoreThreadTimeOut。工作原理，线程池接到一个任务，先判断核心线程数是否够，不够就直接新起一个核心线程来执行，否则核心线程都满了，则判断缓存队列是否满，不满就加入缓存队列，满了就判断maxPoolSize是否满，不满就新起线程来执行，满就根据拒绝策略处理。
+    
+    非核心线程在处理完任务之后，到了超时时间就销毁。AbortPolicy, 丢弃任务并抛出异常（默认）；DiscardPolicy，丢弃任务但不抛异常；DiscardOldestPolicy，丢弃队列最前面的任务，执行现在任务；CallerRunsPolicy，由调用线程池的线程处理任务。
   - 线程安全的集合及其原理；
