@@ -34,4 +34,6 @@
   
     可重入是指当前线程获得了锁资源，当前线程可以直接再次获取锁资源。ReentrantLock和Synchronized都是可重入锁，可重入锁避免单线程的死锁。
   - 线程池；
+
+    核心线程也可以回收，allowCoreThreadTimeOut
   - 线程安全的集合及其原理；
