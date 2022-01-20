@@ -48,4 +48,19 @@
   
   - ***协程***
 
+    - C#协程
+    
+    unity中C#实现的协程，是在游戏主线程中执行的函数，每一帧都判断协程中代码块是否完成，所以在unity的C#协程里没有并发执行的概念。C#的协程通过 IEnumerator 接口实现
+    ```
+    public interface IEnumerator{   
+    object Current { get; } 
+    bool MoveNext(); 
+    void Reset(); }
+    ```
+    MoveNext true时协程里的代码继续往下走，false则跳出协程代码块，后面的代码不执行。yield封装了 IEnumerator的实现，内部实现了一个枚举类，通过MoveNext来遍历访问。
+    
+    - Kotlin协程
+
+      Kotlin协程由作用域(Scope)、调度器(Dispatcher)、任务(Job)、协程上下文(CoroutineContext)组成。
+
 
