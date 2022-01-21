@@ -61,6 +61,6 @@
     
     - Kotlin协程
 
-      Kotlin协程由作用域(Scope)、调度器(Dispatcher)、任务(Job)、协程上下文(CoroutineContext)组成。
+      [协程作用域及挂起原理](https://www.jianshu.com/p/a10a6082e91f)
 
 
