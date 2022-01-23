@@ -85,7 +85,9 @@
     Java堆是虚拟机所管理的内存中最大的一部分，用于存放所有的对象实例，所有的对象实例都在这里分配内存。
   - 方法区
 
-    用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译后的代码（JIT） 
+    用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译后的代码（JIT） 。
+    
+ 类加载的5个时机，1）遇到new\getstatic\putstatic\invokestatic字节指令时。2）使用java.lang.reflect方法进行反射调用时。3）当初始化一个类时，发现父类还没加载，则先加载父类。4）虚拟机启动时，包含在主函数中（main() ）的类。5）JDK1.7动态语言支持，如果一个java.lang.invoke.MethodHandle实例最后的解析结果 REF_getStatic\REF_putStatic\REF_invokeStatic方法句柄。
    
     
 
