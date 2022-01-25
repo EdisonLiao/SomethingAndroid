@@ -90,7 +90,9 @@
  类加载的5个时机，1）遇到new\getstatic\putstatic\invokestatic字节指令时。2）使用java.lang.reflect方法进行反射调用时。3）当初始化一个类时，发现父类还没加载，则先加载父类。4）虚拟机启动时，包含在主函数中（main() ）的类。5）JDK1.7动态语言支持，如果一个java.lang.invoke.MethodHandle实例最后的解析结果 REF_getStatic\REF_putStatic\REF_invokeStatic方法句柄。
    
  
- JVM垃圾收集器类型
+ 强引用，如new Object()，只要引用还在就不会回收。软引用，SoftReference，用于描述一些还有用但并非必须的对象，在系统将要发生内存溢出之前，将会把这些对象列进回收范围之中进行第二次回收。弱引用，WeakReference，被弱引用关联的对象只能活到下一次垃圾收集之前。虚引用，虚引用关联的对象，完全不会对其生命周期构成影响，无法通过虚引用取得一个对象实例，为对象设置虚引用的唯一作用是能在这个对象被回收时收到一个系统通知。
+ 
+ 
     
  
 
