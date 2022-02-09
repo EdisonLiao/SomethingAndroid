@@ -111,6 +111,12 @@
  
  G1垃圾收集器整体基于标记-整理算法实现，把Java堆按Region划分，先回收价值最大的Region，且其停顿时间可预测（因为按Region划分）。
  
+ 
+- 插件化
+  
+  app bundle原理：
+  
+  基于Split Apks加载apk文件，通过AAPT2可以指定Resource的pp字段或固定资源id来解决资源冲突的问题，AssetsManager#addAssetPath把插件的资源路径加入。在8.0及以上版本DexClassLoader和PathClassLoader基本上一样，在8.0以前DexClassLoader的构造方法有一个optimizeDirectiry的参数，用于指定dex2oat的文件。
     
  
 
