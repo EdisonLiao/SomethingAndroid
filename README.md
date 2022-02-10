@@ -119,6 +119,7 @@
   基于Split Apks加载apk文件，通过AAPT2可以指定Resource的pp字段或固定资源id来解决资源冲突的问题，AssetsManager#addAssetPath把插件的资源路径加入。在8.0及以上版本DexClassLoader和PathClassLoader基本上一样，在8.0以前DexClassLoader的构造方法有一个optimizeDirectiry的参数，用于指定dex2oat的文件。
   
   [Qigsaw原理](https://blog.csdn.net/u014294681/article/details/116783861?spm=1001.2014.3001.5502)
+  [Qigsaw自序原理](https://www.bookstack.cn/read/Qigsaw/spilt.3.spilt.2.c47ca9c7359b0d0d.md)
     
  
 
