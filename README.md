@@ -122,5 +122,16 @@
   [Qigsaw自序原理](https://www.bookstack.cn/read/Qigsaw/spilt.3.spilt.2.c47ca9c7359b0d0d.md)
     
  
- Qigsaw本身具备热更新能力，配合Tinker，更新Qigsaw的配置json文件修改其中的插件版本号，达到热更效果。单类加载器、插件资源id的pp位从7f开始递减。
+ Qigsaw本身具备热更新能力，配合Tinker，更新Qigsaw的配置json文件修改其中的插件版本号，达到热更效果（这是因为Qigsaw的配置文件位于assest目录下，所以需要借助Tinker的热修复能力，一个可以探索的方式是把配置文件写到app目录下的sdcard，然后从自己的服务器拉取）。单类加载器、插件资源id的pp位从7f开始递减。
+ 
+- Jetpack Compose原理
+
+  [绘制原理](https://juejin.cn/post/6966241418046078983)
+  
+  [为什么需要compose,声明式UI](https://medium.com/androiddevelopers/understanding-jetpack-compose-part-1-of-2-ca316fe39050)
+  
+  [compose刷新的底层原理](https://medium.com/androiddevelopers/under-the-hood-of-jetpack-compose-part-2-of-2-37b2c20c6cdd)
+   
+ 
+ 
 
