@@ -126,12 +126,15 @@
  
 - Jetpack Compose原理
 
+通过Modifier来修改组件的padding\marging\宽高等属；通过State来做UI刷新，observerAsState可以把livedata转成State，从而可以继续使用viewmodel实现数据驱动刷新；AndroidComposeView继承ViewGroup；
+
   [绘制原理](https://juejin.cn/post/6966241418046078983)
   
   [为什么需要compose,声明式UI](https://medium.com/androiddevelopers/understanding-jetpack-compose-part-1-of-2-ca316fe39050)
   
   [compose刷新的底层原理](https://medium.com/androiddevelopers/under-the-hood-of-jetpack-compose-part-2-of-2-37b2c20c6cdd)
-   
+  
+  
  
  
 
