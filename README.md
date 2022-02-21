@@ -70,6 +70,51 @@
       
       [协程异常处理](https://medium.com/androiddevelopers/exceptions-in-coroutines-ce8da1ec060c)
       
+    - 番外篇  Flow  
+
+    冷流是一种一对一的关系，事件的接收从订阅开始（subscribe），事件发射完数据流则结束，不同订阅者接收到的数据一致，如下代码:
+    
+    ```
+    Observable<Long> cold = Observable.interval(500, TimeUnit.MILLISECONDS); // emits a long every 500 milli seconds
+    cold.subscribe(l -> System.out.println("sub1, " + l)); // subscriber1
+    Thread.sleep(1000); // interval between the two subscribes
+    cold.subscribe(l -> System.out.println("sub2, " + l)); // subscriber2
+    
+    //输出如下：
+    sub1, 0    -> subscriber1 starts
+    sub1, 1
+    sub1, 2
+    sub2, 0    -> subscriber2 starts
+    sub1, 3
+    sub2, 1
+    sub1, 4
+    sub2, 2
+    ```
+    
+    热流是一种一对多的关系，一旦触发则一直发送数据（publish），不同时刻触发订阅的订阅者接收到的数据不一样（按照数据自身的变化），如下代码：
+    
+    ```
+    Observable.interval(500, TimeUnit.MILLISECONDS)
+    .publish(); // publish converts cold to hot
+    
+    ConnectableObservable<Long> hot = Observable
+                                    .interval(500, TimeUnit.MILLISECONDS)
+                                    .publish(); // returns ConnectableObservable
+    hot.connect(); // connect to subscribe
+
+    hot.subscribe(l -> System.out.println("sub1, " + l));
+    Thread.sleep(1000);
+    hot.subscribe(l -> System.out.println("sub2, " + l));
+    
+    //输出如下：
+    sub1, 0  -> subscriber1 starts
+    sub1, 1
+    sub1, 2
+    sub2, 2  -> subscriber2 starts
+    sub1, 3
+    sub2, 3
+    ```
+      
       
 - JVM 原理
    
