@@ -114,6 +114,8 @@
     sub1, 3
     sub2, 3
     ```
+    
+    StateFlow必须有初始值，订阅即接收到初始值。ShareFlow没有初始值，订阅后直到上游有事件发送才会接收到。StateFlow适合MVI开发模式，ShareFlow适合MVVM模式。
       
       
 - JVM 原理
