@@ -183,6 +183,8 @@
   
 - flock保活原理
 
+由于android系统杀进程组是通过for循环40次每次5ms杀死进程，只要在这200ms内新拉起一个进程，则可以避开这200ms
+
 通过反射调用ActivityManagerNative#getDefault方法获得ActivityManagerService的代理类ActivityManagerProxy，在Java层封装好Parcel数据，直接binder通信实现AMS#startService
 
 [weishu](https://weishu.me/2020/01/16/a-keep-alive-method-on-android/) 
