@@ -181,6 +181,11 @@
   
   [compose刷新的底层原理](https://medium.com/androiddevelopers/under-the-hood-of-jetpack-compose-part-2-of-2-37b2c20c6cdd)
   
+- flock保活原理
+
+[weishu](https://weishu.me/2020/01/16/a-keep-alive-method-on-android/) 
+[gityuan](http://gityuan.com/2018/02/24/process-keep-forever/)
+  
   
  
  
