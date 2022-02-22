@@ -183,6 +183,8 @@
   
 - flock保活原理
 
+通过反射调用ActivityManagerNative#getDefault方法获得ActivityManagerService的代理类ActivityManagerProxy，在Java层封装好Parcel数据，直接binder通信实现AMS#startService
+
 [weishu](https://weishu.me/2020/01/16/a-keep-alive-method-on-android/) 
 [gityuan](http://gityuan.com/2018/02/24/process-keep-forever/)
   
