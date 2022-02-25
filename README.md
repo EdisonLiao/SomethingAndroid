@@ -190,7 +190,7 @@
 [weishu](https://weishu.me/2020/01/16/a-keep-alive-method-on-android/) 
 [gityuan](http://gityuan.com/2018/02/24/process-keep-forever/)
 
-- FPS监控
+- FPS监控.  [tencent matrix的实现方案](https://github.com/Tencent/matrix/wiki/Matrix-Android-TraceCanary)
 
 ```
 Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback() {
