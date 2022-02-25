@@ -196,9 +196,53 @@
 Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback() {
     @Override    
     public void doFrame(long frameTimeNanos) {
-        
+        if(frameTimeNanos - mLastFrameNanos > 100) {
+            ...
+        }
+        mLastFrameNanos = frameTimeNanos;
+        Choreographer.getInstance().postFrameCallback(this);
     }
 });
+```
+
+上面的callback每一帧都会调用，可以通过判断两帧间的时间差是否超过16ms来判断是否掉帧。系统对doFrame本身有实现，掉帧超过30帧则log: Choreographer: Skipped 60 frames!  The application may be doing too much work on its main thread
+
+```
+void doFrame(long frameTimeNanos, int frame) {
+        final long startNanos;
+        synchronized (mLock) {
+            if (!mFrameScheduled) {
+                return; // no work to do
+            }
+
+            if (DEBUG_JANK && mDebugPrintNextFrameTimeDelta) {
+                mDebugPrintNextFrameTimeDelta = false;
+                Log.d(TAG, "Frame time delta: "
+                        + ((frameTimeNanos - mLastFrameTimeNanos) * 0.000001f) + " ms");
+            }
+
+            long intendedFrameTimeNanos = frameTimeNanos;
+            startNanos = System.nanoTime();
+            final long jitterNanos = startNanos - frameTimeNanos;
+            if (jitterNanos >= mFrameIntervalNanos) {
+                final long skippedFrames = jitterNanos / mFrameIntervalNanos;
+                if (skippedFrames >= SKIPPED_FRAME_WARNING_LIMIT) {     // SKIPPED_FRAME_WARNING_LIMIT常量值，30
+                    Log.i(TAG, "Skipped " + skippedFrames + " frames!  "
+                            + "The application may be doing too much work on its main thread.");
+                }
+                final long lastFrameOffset = jitterNanos % mFrameIntervalNanos;
+                if (DEBUG_JANK) {
+                    Log.d(TAG, "Missed vsync by " + (jitterNanos * 0.000001f) + " ms "
+                            + "which is more than the frame interval of "
+                            + (mFrameIntervalNanos * 0.000001f) + " ms!  "
+                            + "Skipping " + skippedFrames + " frames and setting frame "
+                            + "time to " + (lastFrameOffset * 0.000001f) + " ms in the past.");
+                }
+                frameTimeNanos = startNanos - lastFrameOffset;
+            }
+        }
+
+    }
 ```
   
   
