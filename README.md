@@ -169,9 +169,10 @@
   
   [Qigsaw原理](https://blog.csdn.net/u014294681/article/details/116783861?spm=1001.2014.3001.5502)
   [Qigsaw自序原理](https://www.bookstack.cn/read/Qigsaw/spilt.3.spilt.2.c47ca9c7359b0d0d.md)
-    
  
  Qigsaw本身具备热更新能力，配合Tinker，更新Qigsaw的配置json文件修改其中的插件版本号，达到热更效果（这是因为Qigsaw的配置文件位于assest目录下，所以需要借助Tinker的热修复能力，一个可以探索的方式是把配置文件写到app目录下的sdcard，然后从自己的服务器拉取）。单类加载器、插件资源id的pp位从7f开始递减。
+ 
+ Art虚拟机优先加载primary dex也就是classes.dex，Tinker的原理即把patch.dex与apk中的classed.dex做合并成新的classes.dex达到热更新目的。
  
 - Jetpack Compose原理
 
