@@ -184,6 +184,9 @@
   
   [compose刷新的底层原理](https://medium.com/androiddevelopers/under-the-hood-of-jetpack-compose-part-2-of-2-37b2c20c6cdd)
   
+  [Jetpack-LiveData组件的问题](https://mp.weixin.qq.com/s/Ai3__FSCXk-lCa4UFyEbYQ)
+  
+  
 - flock保活原理
 
 由于android系统杀进程组是通过for循环40次每次5ms杀死进程，只要在这200ms内新拉起一个进程，则可以避开这200ms
