@@ -186,6 +186,8 @@
   
   [Jetpack-LiveData组件的问题](https://mp.weixin.qq.com/s/Ai3__FSCXk-lCa4UFyEbYQ)
   
+  [livedata丢失数据问题](https://juejin.cn/post/6844903846624362510)
+  
   
 - flock保活原理
 
