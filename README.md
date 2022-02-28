@@ -254,6 +254,10 @@ void doFrame(long frameTimeNanos, int frame) {
 
     }
 ```
+
+- WebView优化
+
+[webview秒开优化方案](https://juejin.cn/post/7016883220025180191#heading-8)
   
   
  
