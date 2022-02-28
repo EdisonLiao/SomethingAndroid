@@ -257,8 +257,8 @@ void doFrame(long frameTimeNanos, int frame) {
 
 - WebView优化
 
-[webview秒开优化方案](https://juejin.cn/post/7016883220025180191#heading-8)。总结起来有：1、全局 webview缩短内核初始化 (MutableContextWrapper可以改变context)。
-2、通过 shouldInterceptRequest方法拦截 H5的请求加载，该方法返回WebResourceResponse，把通用的css、js文件放在客户端本地。
+[webview秒开优化方案](https://juejin.cn/post/7016883220025180191#heading-8)。总结起来有：1、全局 webview缩短内核初始化 (MutableContextWrapper可以改变context)，webview缓存池，公用模板，退出界面时清除界面数据，保留webview的模板样式。
+2、通过 shouldInterceptRequest方法拦截 H5的请求加载，该方法返回WebResourceResponse，把通用的css、js文件放在客户端本地。3、客户端并行请求数据，通过js接口返回给webview。
   
   
  
