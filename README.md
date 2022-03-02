@@ -36,6 +36,9 @@
   - 可重入锁、不可重入锁
   
     可重入是指当前线程获得了锁资源，当前线程可以直接再次获取锁资源。ReentrantLock和Synchronized都是可重入锁，可重入锁避免单线程的死锁。
+    
+    [java锁升级](https://tech.meituan.com/2018/11/15/java-lock.html)
+    
   - 线程池；
 
     核心线程也可以回收，allowCoreThreadTimeOut。工作原理，线程池接到一个任务，先判断核心线程数是否够，不够就直接新起一个核心线程来执行，否则核心线程都满了，则判断缓存队列是否满，不满就加入缓存队列，满了就判断maxPoolSize是否满，不满就新起线程来执行，满就根据拒绝策略处理。
@@ -259,6 +262,7 @@ void doFrame(long frameTimeNanos, int frame) {
 
 [webview秒开优化方案](https://juejin.cn/post/7016883220025180191#heading-8)。总结起来有：1、全局 webview缩短内核初始化 (MutableContextWrapper可以改变context)，webview缓存池，公用模板，退出界面时清除界面数据，保留webview的模板样式。
 2、通过 shouldInterceptRequest方法拦截 H5的请求加载，该方法返回WebResourceResponse，把通用的css、js文件放在客户端本地。3、客户端并行请求数据，通过js接口返回给webview。
+
   
   
  
