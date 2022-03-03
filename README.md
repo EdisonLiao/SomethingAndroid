@@ -299,6 +299,10 @@ void doFrame(long frameTimeNanos, int frame) {
 [webview秒开优化方案](https://juejin.cn/post/7016883220025180191#heading-8)。总结起来有：1、全局 webview缩短内核初始化 (MutableContextWrapper可以改变context)，webview缓存池，公用模板，退出界面时清除界面数据，保留webview的模板样式。
 2、通过 shouldInterceptRequest方法拦截 H5的请求加载，该方法返回WebResourceResponse，把通用的css、js文件放在客户端本地。3、客户端并行请求数据，通过js接口返回给webview。
 
+- 图片占用内存
+
+例如图片的大小是 2592x1936 ，同时采用的位图配置是 ARGB_8888 ，其在内存中需要的大小是 2592x1936x4字节，大概是 19MB。RGB_565则是 2592x1936x2字节 = 9.5M
+
   
   
  
