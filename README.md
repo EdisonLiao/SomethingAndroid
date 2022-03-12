@@ -199,6 +199,10 @@
  
  G1垃圾收集器整体基于标记-整理算法实现，把Java堆按Region划分，先回收价值最大的Region，且其停顿时间可预测（因为按Region划分）。
  
+ - 双亲委派机制
+
+   JVM收到类加载请求的时候，当前的classloader不会直接发起加载，先交给父classloader去加载，只有父classloader加载失败，当前classloader才会发起加载。双亲委派保证了类不会重复加载，要破坏双亲委派则重写loadclass方法。
+ 
  
 - 插件化
   
