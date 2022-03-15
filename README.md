@@ -22,12 +22,23 @@
 
     [知乎](https://www.zhihu.com/question/41048032) 
     
+    [如何停止一个线程](https://cloud.tencent.com/developer/article/1591144)
+    
     
   - 线程的状态
   
     [线程状态-博客园](https://www.cnblogs.com/aspirant/p/8876670.html)
     
     wait、notify是Object类拥有的方法，成对出现，wait会让出cpu和锁资源，线程进入阻塞，notify后 cpu唤醒对应锁资源的线程，重新进入可运行状态。
+    
+    sleep和wait区别使用方面：
+    从使用的角度来看sleep方法是Thread线程类的方法，而wait是Object顶级类的方法。
+    sleep可以在任何地方使用，而wait只能在同步方法和同步块中使用。
+    CPU及锁资源释放:
+    sleep、wait调用后都会暂停当前线程并让出CPU的执行时间，但不同的是sleep不会释放当前持有对象的锁资源，到时间后会继续执行，而wait会释放所有的锁并需要notify/notifyAll后重新获取到对象资源后     才能继续执行。
+    异常捕获方面：
+    sleep需要捕获或者抛出异常，而wait/notify/notifyAll则不需要。
+    
     
     sleep、yield是 Thread拥有的方法，sleep让出cpu资源，间隔时间后重新进入可运行状态。yield让出cpu资源，cpu重新选择线程进入可运行状态，也有可能选到原本yield的线程，yield的作用在于告诉cpu当前线程的工作快完成了。
     
