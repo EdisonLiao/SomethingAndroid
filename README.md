@@ -21,8 +21,6 @@
   - interrupt方法
 
     [知乎](https://www.zhihu.com/question/41048032) 
-链接：https://www.zhihu.com/question/41048032/answer/89431513
-    
     
     
   - 线程的状态
