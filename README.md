@@ -18,6 +18,10 @@
   - 死锁
     
     至少两个线程无序抢占彼此已经占有的锁资源，导致相关线程都进入阻塞。解决办法：按顺序获得所有的锁资源、获取锁资源加入超时判断。
+  - interrupt方法
+
+    [知乎](https://www.zhihu.com/question/41048032) 
+链接：https://www.zhihu.com/question/41048032/answer/89431513
     
     
     
