@@ -333,6 +333,7 @@ void doFrame(long frameTimeNanos, int frame) {
   2. postDelay的实现是通过when关键字，死循环中取出when做比较，靠前的message插入队列头
   3. Handler的死循环可以保证UI线程不被回收
   4. HandlerThread是一个封装了Looper的Thread类，就是为了让我们在子线程里面更方便的使用Handler
+  5. BlockCanary的原理，Handler在执行消息前后会通过一个Printer类打印日志，可以自定义Printer来获得消息执行前后的回调
 
   
   
