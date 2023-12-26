@@ -325,6 +325,13 @@ void doFrame(long frameTimeNanos, int frame) {
 
 例如图片的大小是 2592x1936 ，同时采用的位图配置是 ARGB_8888 ，其在内存中需要的大小是 2592x1936x4字节，大概是 19MB。RGB_565则是 2592x1936x2字节 = 9.5M
 
+- Handler
+
+  1. Handler的消息类型有：同步消息、异步消息、同步消息屏障三种，同步消息屏障其实是一个标志位，当设置同步消息屏障时，优先处理异步消息。屏障消息也有一个when字段，只能拦截其when之后的消息
+  2. postDelay的实现是通过when关键字，死循环中取出when做比较，靠前的message插入队列头
+  3. Handler的死循环可以保证UI线程不被回收
+  4. HandlerThread是一个封装了Looper的Thread类，就是为了让我们在子线程里面更方便的使用Handler
+
   
   
  
