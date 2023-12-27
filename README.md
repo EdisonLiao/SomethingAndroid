@@ -340,6 +340,8 @@ void doFrame(long frameTimeNanos, int frame) {
 
   关于 dispatchTouchEvent和onInterceptTouchEvent的区别： [区别](https://stackoverflow.com/questions/9586032/android-difference-between-onintercepttouchevent-and-dispatchtouchevent)
 
+  Activity、ViewGroup、View都有 dispatchTouchEvent和 onTouchEvent方法，ViewGroup多了一个onInterceptTouchEvent方法，这三个方法返回 true都表示消费对应的事件
+
   
   
  
