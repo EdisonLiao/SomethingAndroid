@@ -334,6 +334,10 @@ void doFrame(long frameTimeNanos, int frame) {
   3. Handler的死循环可以保证UI线程不被回收
   4. HandlerThread是一个封装了Looper的Thread类，就是为了让我们在子线程里面更方便的使用Handler
   5. BlockCanary的原理，Handler在执行消息前后会通过一个Printer类打印日志，可以自定义Printer来获得消息执行前后的回调
+ 
+- 事件分发
+
+  关于 dispatchTouchEvent和onInterceptTouchEvent的区别： [区别](https://stackoverflow.com/questions/9586032/android-difference-between-onintercepttouchevent-and-dispatchtouchevent)
 
   
   
