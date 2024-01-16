@@ -345,6 +345,8 @@ JPG、JPEG、PNG、WEBP只是图片编码格式，影响的是图片存储大小
   3. Handler的死循环可以保证UI线程不被回收
   4. HandlerThread是一个封装了Looper的Thread类，就是为了让我们在子线程里面更方便的使用Handler
   5. BlockCanary的原理，Handler在执行消息前后会通过一个Printer类打印日志，可以自定义Printer来获得消息执行前后的回调
+  6. 设置同步屏障消息后，找到同步屏障消息（target为null），若没有找到则一直休眠，所以同步屏障消息使用后需要手动移除
+  7. [Handler万文长字](https://juejin.cn/post/7016728431723282463#heading-10)
 
  
 - 事件分发
