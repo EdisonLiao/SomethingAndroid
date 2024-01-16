@@ -334,6 +334,8 @@ void doFrame(long frameTimeNanos, int frame) {
 
 例如图片的大小是 2592x1936 ，同时采用的位图配置（每个像素占用的位数）是 ARGB_8888 ，其在内存中需要的大小是 2592x1936x4字节，大概是 19MB。RGB_565则是 2592x1936x2字节 = 9.5M
 
+[官方对图片加载处理的说明](https://developer.android.com/develop/ui/views/graphics)
+
 JPG、JPEG、PNG、WEBP只是图片编码格式，影响的是图片存储大小。其中PNG是无损压缩
 
 - Handler
