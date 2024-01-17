@@ -240,7 +240,7 @@
  [插件化原理解释](https://github.com/Demo-H/Android-Notes/blob/master/notes/android/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E6%8A%80%E6%9C%AF%E2%80%94%E2%80%94%E5%8E%9F%E7%90%86%E7%AF%87.md)
 
  插件实现热修复：在 BaseDexClassLoader 里，有一个 DexPathList 变量，在 DexPathList 的实现里，有一个 Element[] dexElements 变量，这里面保存了所有的 dex。在加载 Class 的时候，就遍历 dexElements 成员，依次查找 Class，找到以后就返回
- 
+，需要重启应用才生效，因为已经加载的类在内存中就不会在加载 
 - Jetpack Compose原理
 
 通过Modifier来修改组件的padding\marging\宽高等属；通过State来做UI刷新，observerAsState可以把livedata转成State，从而可以继续使用viewmodel实现数据驱动刷新；AndroidComposeView继承ViewGroup，里面持有 LayoutNode调用draw方法；remember可以保存数据，在recompose(重绘)的时候对应的节点不用重新刷新；通过Layout这个Composeable实现自定义组件，measure\draw\position三个方法；
