@@ -103,7 +103,7 @@
     HashMap由数组、链表、红黑树三种数据结构组成，把key做哈希值运算，然后得到的数组的index，如果数组对应的位置为空，就插入，否则放到对应数组下标的链表中，链表长度为8，超过就变成红黑树。
     HashMap不安全的原因，在发生hash碰撞的时候，两个线程计算得到的哈希值一样，数值index一样，此时数组为空的话，则会发生两个线程对同一index值做修改。
     
-    JDK1.8后ConcurrentHashMap由桶（数组）、链表、红黑树三种数据结构组成，采用 CAS(campare and swipe) 和 synchronize实现线程安全，锁的粒度是每个桶(即每个数组元素为单位)。CAS是乐观锁，默认没有锁，若遇到锁则一直循环等待。synchronize是悲观锁，默认有锁。
+    JDK1.8后ConcurrentHashMap由桶（数组）、链表、红黑树三种数据结构组成，采用 CAS(campare and swipe) 和 synchronize实现线程安全，锁的粒度是每个桶(即每个数组的首节点)。CAS是乐观锁，默认没有锁，若遇到锁则一直循环等待。synchronize是悲观锁，默认有锁。
 
   
   - ***协程***
