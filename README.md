@@ -226,7 +226,7 @@
   
   app bundle原理：
   
-  基于Split Apks加载apk文件，通过AAPT2可以指定Resource的pp字段或固定资源id来解决资源冲突的问题，AssetsManager#addAssetPath把插件的资源路径加入。在8.0及以上版本DexClassLoader和PathClassLoader基本上一样，在8.0以前DexClassLoader的构造方法有一个optimizeDirectiry的参数，用于指定dex2oat的文件。
+  基于Split Apks加载apk文件，通过AAPT2可以指定Resource的pp字段或固定资源id来解决资源冲突的问题，AssetsManager#addAssetPath把插件的资源路径加入。在8.1及以上版本DexClassLoader和PathClassLoader基本上一样（都能加载外部Dex文件），在8.0以前DexClassLoader的构造方法有一个optimizeDirectiry的参数，用于指定dex2oat的文件。
   
   [Resource与AssetsManager的关系](https://sharrychoo.github.io/blog/android-source/resources-manager)
   
@@ -236,6 +236,8 @@
  Qigsaw本身具备热更新能力，配合Tinker，更新Qigsaw的配置json文件修改其中的插件版本号，达到热更效果（这是因为Qigsaw的配置文件位于assest目录下，所以需要借助Tinker的热修复能力，一个可以探索的方式是把配置文件写到app目录下的sdcard，然后从自己的服务器拉取）。单类加载器、插件资源id的pp位从7f开始递减。
  
  Art虚拟机优先加载primary dex也就是classes.dex，Tinker的原理即把patch.dex与apk中的classed.dex做合并成新的classes.dex达到热更新目的。
+
+ [插件化原理解释](https://github.com/Demo-H/Android-Notes/blob/master/notes/android/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E6%8A%80%E6%9C%AF%E2%80%94%E2%80%94%E5%8E%9F%E7%90%86%E7%AF%87.md)
  
 - Jetpack Compose原理
 
