@@ -238,6 +238,8 @@
  Art虚拟机优先加载primary dex也就是classes.dex，Tinker的原理即把patch.dex与apk中的classed.dex做合并成新的classes.dex达到热更新目的。
 
  [插件化原理解释](https://github.com/Demo-H/Android-Notes/blob/master/notes/android/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E6%8A%80%E6%9C%AF%E2%80%94%E2%80%94%E5%8E%9F%E7%90%86%E7%AF%87.md)
+
+ 插件实现热修复：在 BaseDexClassLoader 里，有一个 DexPathList 变量，在 DexPathList 的实现里，有一个 Element[] dexElements 变量，这里面保存了所有的 dex。在加载 Class 的时候，就遍历 dexElements 成员，依次查找 Class，找到以后就返回
  
 - Jetpack Compose原理
 
