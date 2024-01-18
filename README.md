@@ -359,6 +359,8 @@ JPG、JPEG、PNG、WEBP只是图片编码格式，影响的是图片存储大小
 
   Activity、ViewGroup、View都有 dispatchTouchEvent和 onTouchEvent方法，ViewGroup多了一个onInterceptTouchEvent方法
 
+  onTouch 和onTouchEvent 有什么区别: onTouch方式是View的OnTouchListener接口中定义的方法（单个View）。当一个View绑定了OnTouchListener后，当有Touch事件触发时，就会调用onTouch方法，onTouckEvent则不会调用
+
   ![image](https://github.com/EdisonLiao/PrepareAndroid/assets/14108176/a62ca054-a319-4d1c-968d-674c4298aa86)
 
   ![image](https://github.com/EdisonLiao/PrepareAndroid/assets/14108176/80725254-0447-4dd0-96c9-c2f280e1c50f)
