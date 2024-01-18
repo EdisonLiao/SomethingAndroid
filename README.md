@@ -368,6 +368,8 @@ JPG、JPEG、PNG、WEBP只是图片编码格式，影响的是图片存储大小
 
   [根本上理解](https://javabetter.cn/thread/shengchanzhe-xiaofeizhe.html#blockingqueue-%E5%AE%9E%E7%8E%B0%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9%E8%80%85)
 
+  LinkedBlockingQueue阻塞队列，put方法发现队列满则阻塞调用put方法的线程，take方法发现队列空则阻塞调用take方法的线程
+
 
 
   
