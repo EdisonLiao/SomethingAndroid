@@ -357,7 +357,15 @@ JPG、JPEG、PNG、WEBP只是图片编码格式，影响的是图片存储大小
 
   关于 dispatchTouchEvent和onInterceptTouchEvent的区别： [区别](https://stackoverflow.com/questions/9586032/android-difference-between-onintercepttouchevent-and-dispatchtouchevent)
 
-  Activity、ViewGroup、View都有 dispatchTouchEvent和 onTouchEvent方法，ViewGroup多了一个onInterceptTouchEvent方法，这三个方法返回 true都表示消费对应的事件
+  Activity、ViewGroup、View都有 dispatchTouchEvent和 onTouchEvent方法，ViewGroup多了一个onInterceptTouchEvent方法
+
+  ![image](https://github.com/EdisonLiao/PrepareAndroid/assets/14108176/a62ca054-a319-4d1c-968d-674c4298aa86)
+
+  ![image](https://github.com/EdisonLiao/PrepareAndroid/assets/14108176/80725254-0447-4dd0-96c9-c2f280e1c50f)
+
+
+
+  
 
   
   
