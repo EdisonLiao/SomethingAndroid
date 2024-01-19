@@ -389,6 +389,7 @@ ContentProvider数据的提供及修改者，ContentResolver数据的查询者�
 - 后台打开Activity的方案
   - fullScreenPendingIntent全面屏通知
   - 通过SystemService获取到ActivityManager,把对应包名调用moveTaskToFront
+  - 获取系统权限，比如：SYSTEM_ALERT_WINDOW、Display over other apps
   - Hook Rom，比如小米：
  
     ```kotlin
