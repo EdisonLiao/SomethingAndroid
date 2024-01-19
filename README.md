@@ -216,6 +216,36 @@
  CMS垃圾收集器（Concurrent Mark Sweep）是基于标记-清除算法实现，其分为初始标记、并发标记、重新标记、并发清除，其中初始标记、重新标记是Stop The World的处理，基于标记-清除缺点是会产生内存碎片，且CMS无法处理浮动垃圾（因为是并发清理）。
  
  G1垃圾收集器整体基于标记-整理算法实现，把Java堆按Region划分，先回收价值最大的Region，且其停顿时间可预测（因为按Region划分）。
+
+ - GCRoot说明及示例
+  ```java
+/**在Java开发中，以下几种对象可以作为GCRoot：
+
+虚拟机栈（栈帧中的局部变量表）中引用的对象
+方法区中类静态属性引用的对象
+方法区中常量引用的对象
+本地方法栈中JNI（Java Native Interface）引用的对象
+示例代码及注释说明如下：
+**/
+public class GCRootExample {
+
+    // 虚拟机栈（栈帧中的局部变量表）中引用的对象
+    public void stackRoot() {
+        Object obj = new Object(); // obj 是一个GCRoot
+        // 可能的引用传递，如传递给其他方法或者线程等
+    }
+
+    // 方法区中类静态属性引用的对象
+    private static Object staticObj; // staticObj 是一个GCRoot
+
+    // 方法区中常量引用的对象
+    private final Object constantObj = new Object(); // constantObj 是一个GCRoot
+
+    // 本地方法栈中JNI引用的对象
+    public native void nativeMethod();
+}
+在上面的示例中，obj、staticObj、constantObj都可以作为GCRoot，因为它们分别属于虚拟机栈中的局部变量表、方法区中的类静态属性、方法区中的常量。
+  ```
  
  - 双亲委派机制
 
