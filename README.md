@@ -398,6 +398,12 @@ ContentProvider数据的提供及修改者，ContentResolver数据的查询者�
             method.invoke(intent, 0x2)
     ```
 
+- ART和Dalvik的区别
+
+ART采用的是AOT（Ahead-of-time）编译方式，在app安装的时候解析Dex，用dex2oat工具，解析为oat格式文件，加快app启动速度。Dalvik采用JIT（just-in-time）编译，app只有在打开的时候才会编译，dex编译为odex文件，app打开速度慢，但适合内存小的设备
+
+  [文章](https://www.geeksforgeeks.org/difference-between-dalvik-and-art-in-android/)
+
 
 
   
