@@ -381,6 +381,8 @@ Serializable 会使用反射，序列化和反序列化过程需要大量 I/O �
 
 [AIDL使用及原理解释](https://zhuanlan.zhihu.com/p/338093696)、[Messagener使用](https://zhuanlan.zhihu.com/p/343230358)
 
+ContentProvider数据的提供及修改者，ContentResolver数据的查询者，ContentObserver监听某个Uri变化
+
 - ANR
 [ANR治理](https://blog.csdn.net/SEU_Calvin/article/details/128484901?spm=1001.2014.3001.5502)
 
