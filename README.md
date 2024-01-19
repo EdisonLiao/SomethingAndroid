@@ -458,6 +458,8 @@ ART采用的是AOT（Ahead-of-time）编译方式，在app安装的时候解析D
 这个时候B 覆盖了窗体, A 会调用onStop()方法. 如果B 是个透明的,或者是对话框的样式, 就不会调用A 的
 onStop()方法
 
+[屏幕旋转处理](https://blog.csdn.net/qq_16064871/article/details/46480525)
+
 
 
   
