@@ -452,6 +452,12 @@ ART采用的是AOT（Ahead-of-time）编译方式，在app安装的时候解析D
 
   [文章](https://www.geeksforgeeks.org/difference-between-dalvik-and-art-in-android/)
 
+- 两个Activity跳转的生命方法（都是standar模式的话）
+
+一般情况下比如说有两个activity,分别叫A,B,当在A 里面激活B 组件的时候, A 会调用onPause()方法,然后B 调用onCreate() ,onStart(), onResume()。
+这个时候B 覆盖了窗体, A 会调用onStop()方法. 如果B 是个透明的,或者是对话框的样式, 就不会调用A 的
+onStop()方法
+
 
 
   
