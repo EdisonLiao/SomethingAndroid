@@ -381,6 +381,9 @@ Serializable 会使用反射，序列化和反序列化过程需要大量 I/O �
 
 [使用及原理解释](https://zhuanlan.zhihu.com/p/338093696)
 
+- ANR
+[ANR治理](https://blog.csdn.net/SEU_Calvin/article/details/128484901?spm=1001.2014.3001.5502)
+
 
 
 
