@@ -386,6 +386,16 @@ ContentProvider数据的提供及修改者，ContentResolver数据的查询者�
 - ANR
 [ANR治理](https://blog.csdn.net/SEU_Calvin/article/details/128484901?spm=1001.2014.3001.5502)
 
+- 后台打开Activity的方案
+  - fullScreenPendingIntent全面屏通知
+  - 通过SystemService获取到ActivityManager,把对应包名调用moveTaskToFront
+  - Hook Rom，比如小米：
+ 
+    ```kotlin
+    val method = intent.javaClass
+                .getDeclaredMethod("addMiuiFlags", Int::class.javaPrimitiveType)
+            method.invoke(intent, 0x2)
+    ```
 
 
 
