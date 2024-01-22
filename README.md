@@ -460,6 +460,9 @@ onStop()方法
 
 [屏幕旋转处理](https://blog.csdn.net/qq_16064871/article/details/46480525)
 
+- Java动态代理
+
+  通过InvokeHandler，hook接口的方法调用处，再通过Proxy.newInstance构造出接口示例化对象
 
 
   
