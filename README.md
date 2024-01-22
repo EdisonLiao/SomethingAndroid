@@ -464,6 +464,10 @@ onStop()方法
 
   通过InvokeHandler，hook接口的方法调用处，再通过Proxy.newInstance构造出接口示例化对象
 
+- by lazy 和 lateinit
+
+  bylazy默认是线程安全的（LazyThreadSafetyMode包括：SYNCHRONIZED（默认）、PUBLICATION、NONE），bylazy只有在第一次取值的时候初始化，变量用val修饰。lateinit用var修饰，可以多次赋值，不保证线程安全
+
 
   
 
