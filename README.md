@@ -468,6 +468,9 @@ onStop()方法
 
   bylazy默认是线程安全的（LazyThreadSafetyMode包括：SYNCHRONIZED（默认）、PUBLICATION、NONE），bylazy只有在第一次取值的时候初始化，变量用val修饰。lateinit用var修饰，可以多次赋值，不保证线程安全
 
+- DOM、SAM、PULL解析
+  DOM将整个XML文件加载到内存中，SAM和PULL逐行解析XML内容（PULL: 类似SAX，也是基于事件驱动的解析方式，但提供了类似于迭代器的接口，允许程序员通过迭代的方式逐步获取文档中的数据），android中使用的是PULL解析
+
 
   
 
