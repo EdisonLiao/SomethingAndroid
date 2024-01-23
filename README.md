@@ -105,6 +105,12 @@
     
     JDK1.8后ConcurrentHashMap由桶（数组）、链表、红黑树三种数据结构组成，采用 CAS(campare and swipe) 和 synchronize实现线程安全，锁的粒度是每个桶(即每个数组的首节点)。CAS是乐观锁，默认没有锁，若遇到锁则一直循环等待。synchronize是悲观锁，默认有锁。
 
+- 生产者消费者
+
+  [根本上理解](https://javabetter.cn/thread/shengchanzhe-xiaofeizhe.html#blockingqueue-%E5%AE%9E%E7%8E%B0%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9%E8%80%85)
+
+  LinkedBlockingQueue阻塞队列，put方法发现队列满则阻塞调用put方法的线程，take方法发现队列空则阻塞调用take方法的线程
+
   
   - ***协程***
 
@@ -413,12 +419,6 @@ JPG、JPEG、PNG、WEBP只是图片编码格式，影响的是图片存储大小
 
   ![image](https://github.com/EdisonLiao/PrepareAndroid/assets/14108176/80725254-0447-4dd0-96c9-c2f280e1c50f)
 
-
-- 生产者消费者
-
-  [根本上理解](https://javabetter.cn/thread/shengchanzhe-xiaofeizhe.html#blockingqueue-%E5%AE%9E%E7%8E%B0%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9%E8%80%85)
-
-  LinkedBlockingQueue阻塞队列，put方法发现队列满则阻塞调用put方法的线程，take方法发现队列空则阻塞调用take方法的线程
 
 - Serializable和Parcelable区别
 
