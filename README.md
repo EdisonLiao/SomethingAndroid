@@ -471,6 +471,8 @@ onStop()方法
 - DOM、SAM、PULL解析
   DOM将整个XML文件加载到内存中，SAM和PULL逐行解析XML内容（PULL: 类似SAX，也是基于事件驱动的解析方式，但提供了类似于迭代器的接口，允许程序员通过迭代的方式逐步获取文档中的数据），android中使用的是PULL解析
 
+- [Android异常处理流程](https://jiyang.site/posts/2019-11-22-java-%E5%92%8C-android-%E7%9A%84%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B/)
+
 
   
 
