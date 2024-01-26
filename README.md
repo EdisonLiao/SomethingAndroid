@@ -479,6 +479,8 @@ onStop()方法
 
 - [深浅拷贝](https://blog.csdn.net/riemann_/article/details/87217229)
 
+- [泛型](https://rengwuxian.com/kotlin-generics/)
+
 
   
 
