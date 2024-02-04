@@ -275,7 +275,7 @@ public class GCRootExample {
 
    JVM收到类加载请求的时候，当前的classloader不会直接发起加载，先交给父classloader去加载，只有父classloader加载失败，当前classloader才会发起加载。双亲委派保证了类不会重复加载，要破坏双亲委派则重写loadclass方法。
 
-   [详解](https://blog.csdn.net/swadian2008/article/details/122364441)
+   [双亲委派详解](https://blog.csdn.net/swadian2008/article/details/122364441)
  
  
 - 插件化
