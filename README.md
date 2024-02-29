@@ -125,6 +125,10 @@
 
   LinkedBlockingQueue阻塞队列，put方法发现队列满则阻塞调用put方法的线程，take方法发现队列空则阻塞调用take方法的线程
 
+- 在View的OnClick中加上Sleep(10s)会发生什么
+
+  有可能会触发ANR，如果在Sleep期间，用户触摸了屏幕则会产生ANR（其它线程发消息过来也会触发）。如果在Sleep触发View刷新事件，事件会等到Sleep完成后再进行处理。Sleep期间主线程处于挂起状态
+
   
   - ***协程***
 
