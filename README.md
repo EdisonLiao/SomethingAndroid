@@ -328,6 +328,8 @@ public class GCRootExample {
   [Jetpack-LiveData组件的问题](https://mp.weixin.qq.com/s/Ai3__FSCXk-lCa4UFyEbYQ)
   
   [livedata丢失数据问题](https://juejin.cn/post/6844903846624362510)
+
+  - LifeCycle实现的核心是通过在Activity或者Fragment中添加一个空的ReportFragment（类似Glide旧版本做法）
   
   
 - flock保活原理
