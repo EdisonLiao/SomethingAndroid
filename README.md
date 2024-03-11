@@ -339,6 +339,7 @@ public class GCRootExample {
 通过反射调用ActivityManagerNative#getDefault方法获得ActivityManagerService的代理类ActivityManagerProxy，在Java层封装好Parcel数据，直接binder通信实现AMS#startService
 
 - Bundle Mismatch
+
   [原理解析 一](https://xz.aliyun.com/t/2364?time__1311=n4%2BxnieDqWq2GkDgDBTro0cxRQ8qKx&alichlgref=https%3A%2F%2Fwww.google.com.hk%2F)
 
   [原理解析 二](https://wrlus.com/android-security/bundle-mismatch/)
