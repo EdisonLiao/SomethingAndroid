@@ -344,6 +344,8 @@ public class GCRootExample {
 
   [原理解析 二](https://wrlus.com/android-security/bundle-mismatch/)
 
+  [Parcel数据开悟](https://evilpan.com/2023/02/18/parcel-bugs/#%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8)
+
 [weishu](https://weishu.me/2020/01/16/a-keep-alive-method-on-android/) 
 [gityuan](http://gityuan.com/2018/02/24/process-keep-forever/)
 
